@@ -15,6 +15,13 @@
 		EF9DA8FB2617DCDF003DB734 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF9DA8F92617DCDF003DB734 /* LaunchScreen.storyboard */; };
 		EF9DA9062617DCDF003DB734 /* CoordinatorFlowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9DA9052617DCDF003DB734 /* CoordinatorFlowTests.swift */; };
 		EF9DA9112617DCDF003DB734 /* CoordinatorFlowUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9DA9102617DCDF003DB734 /* CoordinatorFlowUITests.swift */; };
+		EF9DA9222617DD16003DB734 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9DA9212617DD16003DB734 /* Coordinator.swift */; };
+		EF9DA92A2617DD70003DB734 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9DA9292617DD70003DB734 /* Storyboarded.swift */; };
+		EF9DA92F2617DE8F003DB734 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9DA92E2617DE8F003DB734 /* MainCoordinator.swift */; };
+		EF9DA9372617E1FA003DB734 /* BuyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9DA9362617E1FA003DB734 /* BuyVC.swift */; };
+		EF9DA93C2617E20E003DB734 /* CreateAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9DA93B2617E20E003DB734 /* CreateAccountVC.swift */; };
+		EF9DA94D26187E32003DB734 /* BuyCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9DA94C26187E32003DB734 /* BuyCoordinator.swift */; };
+		EF9DA952261880BC003DB734 /* CreateAccountCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9DA951261880BC003DB734 /* CreateAccountCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +56,13 @@
 		EF9DA90C2617DCDF003DB734 /* CoordinatorFlowUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoordinatorFlowUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF9DA9102617DCDF003DB734 /* CoordinatorFlowUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorFlowUITests.swift; sourceTree = "<group>"; };
 		EF9DA9122617DCDF003DB734 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF9DA9212617DD16003DB734 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		EF9DA9292617DD70003DB734 /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
+		EF9DA92E2617DE8F003DB734 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		EF9DA9362617E1FA003DB734 /* BuyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyVC.swift; sourceTree = "<group>"; };
+		EF9DA93B2617E20E003DB734 /* CreateAccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountVC.swift; sourceTree = "<group>"; };
+		EF9DA94C26187E32003DB734 /* BuyCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyCoordinator.swift; sourceTree = "<group>"; };
+		EF9DA951261880BC003DB734 /* CreateAccountCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,12 +113,9 @@
 		EF9DA8ED2617DCDD003DB734 /* CoordinatorFlow */ = {
 			isa = PBXGroup;
 			children = (
-				EF9DA8EE2617DCDD003DB734 /* AppDelegate.swift */,
-				EF9DA8F02617DCDD003DB734 /* SceneDelegate.swift */,
-				EF9DA8F22617DCDD003DB734 /* ViewController.swift */,
-				EF9DA8F42617DCDD003DB734 /* Main.storyboard */,
-				EF9DA8F72617DCDF003DB734 /* Assets.xcassets */,
-				EF9DA8F92617DCDF003DB734 /* LaunchScreen.storyboard */,
+				EF9DA9482617E29D003DB734 /* Component */,
+				EF9DA9472617E298003DB734 /* Screens */,
+				EF9DA9462617E293003DB734 /* Coordinator */,
 				EF9DA8FC2617DCDF003DB734 /* Info.plist */,
 			);
 			path = CoordinatorFlow;
@@ -126,6 +137,40 @@
 				EF9DA9122617DCDF003DB734 /* Info.plist */,
 			);
 			path = CoordinatorFlowUITests;
+			sourceTree = "<group>";
+		};
+		EF9DA9462617E293003DB734 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				EF9DA9292617DD70003DB734 /* Storyboarded.swift */,
+				EF9DA9212617DD16003DB734 /* Coordinator.swift */,
+				EF9DA92E2617DE8F003DB734 /* MainCoordinator.swift */,
+				EF9DA94C26187E32003DB734 /* BuyCoordinator.swift */,
+				EF9DA951261880BC003DB734 /* CreateAccountCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		EF9DA9472617E298003DB734 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				EF9DA8F22617DCDD003DB734 /* ViewController.swift */,
+				EF9DA9362617E1FA003DB734 /* BuyVC.swift */,
+				EF9DA93B2617E20E003DB734 /* CreateAccountVC.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		EF9DA9482617E29D003DB734 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				EF9DA8F02617DCDD003DB734 /* SceneDelegate.swift */,
+				EF9DA8EE2617DCDD003DB734 /* AppDelegate.swift */,
+				EF9DA8F42617DCDD003DB734 /* Main.storyboard */,
+				EF9DA8F72617DCDF003DB734 /* Assets.xcassets */,
+				EF9DA8F92617DCDF003DB734 /* LaunchScreen.storyboard */,
+			);
+			path = Component;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,8 +303,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF9DA94D26187E32003DB734 /* BuyCoordinator.swift in Sources */,
+				EF9DA9222617DD16003DB734 /* Coordinator.swift in Sources */,
+				EF9DA92F2617DE8F003DB734 /* MainCoordinator.swift in Sources */,
 				EF9DA8F32617DCDD003DB734 /* ViewController.swift in Sources */,
+				EF9DA92A2617DD70003DB734 /* Storyboarded.swift in Sources */,
+				EF9DA93C2617E20E003DB734 /* CreateAccountVC.swift in Sources */,
+				EF9DA952261880BC003DB734 /* CreateAccountCoordinator.swift in Sources */,
 				EF9DA8EF2617DCDD003DB734 /* AppDelegate.swift in Sources */,
+				EF9DA9372617E1FA003DB734 /* BuyVC.swift in Sources */,
 				EF9DA8F12617DCDD003DB734 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
