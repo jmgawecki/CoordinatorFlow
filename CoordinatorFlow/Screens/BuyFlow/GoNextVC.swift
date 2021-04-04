@@ -38,9 +38,7 @@ class GoNextVC: UIViewController {
     
     
     private func configureVC() {
-        view.backgroundColor    = .systemBackground
-        title                   = "GoNextVC"
-        navigationController?.navigationBar.prefersLargeTitles = true
+        self.configureVC(title: "GoNextVC", backgroundColor: .systemBackground, isTitleLarge: true)
     }
 
     

@@ -24,6 +24,7 @@
 		EF9DA952261880BC003DB734 /* CreateAccountCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9DA951261880BC003DB734 /* CreateAccountCoordinator.swift */; };
 		EF9DA95F26189A50003DB734 /* GoNextVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9DA95E26189A50003DB734 /* GoNextVC.swift */; };
 		EF9DA96926189B70003DB734 /* GoNextCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9DA96826189B70003DB734 /* GoNextCoordinator.swift */; };
+		EF9DA98D2619D815003DB734 /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9DA98C2619D815003DB734 /* UIViewController+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		EF9DA951261880BC003DB734 /* CreateAccountCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountCoordinator.swift; sourceTree = "<group>"; };
 		EF9DA95E26189A50003DB734 /* GoNextVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoNextVC.swift; sourceTree = "<group>"; };
 		EF9DA96826189B70003DB734 /* GoNextCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoNextCoordinator.swift; sourceTree = "<group>"; };
+		EF9DA98C2619D815003DB734 /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +119,7 @@
 		EF9DA8ED2617DCDD003DB734 /* CoordinatorFlow */ = {
 			isa = PBXGroup;
 			children = (
+				EF9DA98B2619D80A003DB734 /* Extension */,
 				EF9DA9482617E29D003DB734 /* Component */,
 				EF9DA9472617E298003DB734 /* Screens */,
 				EF9DA9462617E293003DB734 /* Coordinator */,
@@ -209,6 +212,14 @@
 				EF9DA951261880BC003DB734 /* CreateAccountCoordinator.swift */,
 			);
 			path = CreateCoordinatorPath;
+			sourceTree = "<group>";
+		};
+		EF9DA98B2619D80A003DB734 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				EF9DA98C2619D815003DB734 /* UIViewController+Ext.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -342,6 +353,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF9DA94D26187E32003DB734 /* BuyCoordinator.swift in Sources */,
+				EF9DA98D2619D815003DB734 /* UIViewController+Ext.swift in Sources */,
 				EF9DA9222617DD16003DB734 /* Coordinator.swift in Sources */,
 				EF9DA92F2617DE8F003DB734 /* MainCoordinator.swift in Sources */,
 				EF9DA96926189B70003DB734 /* GoNextCoordinator.swift in Sources */,
