@@ -12,12 +12,14 @@ class GoNextVC: UIViewController {
     weak var coordinator: GoNextCoordinator?
     var parameter: Int!
     
-    var button: UIButton!
+    var goToCreateButton:   UIButton!
+    var goBackToHomeButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         configureVC()
-        configureButton()
+        configureButtons()
+        layoutUI()
         // Do any additional setup after loading the view.
     }
     
@@ -32,32 +34,55 @@ class GoNextVC: UIViewController {
     }
     
     
-    @objc private func buttonTapped() {
+    @objc private func goToCreateButtonTapped() {
         coordinator?.createAccount()
+    }
+    
+    
+    @objc private func goBackToHomeButtonTapped() {
+        coordinator?.goBackToHome()
     }
     
     
     private func configureVC() {
         self.configureVC(title: "GoNextVC", backgroundColor: .systemBackground, isTitleLarge: true)
     }
+    
+    
+    private func configureButtons() {
+        goToCreateButton = UIButton()
+        goToCreateButton.setTitle("Create Account", for: .normal)
+        goToCreateButton.setTitleColor(.red, for: .normal)
+        goToCreateButton.layer.borderWidth = 1
+        
+        goToCreateButton.addTarget(self, action: #selector(goToCreateButtonTapped), for: .touchUpInside)
+        
+        goBackToHomeButton = UIButton()
+        goBackToHomeButton.setTitle("Go back to Home", for: .normal)
+        goBackToHomeButton.setTitleColor(.red, for: .normal)
+        goBackToHomeButton.layer.borderWidth = 1
+        
+        goBackToHomeButton.addTarget(self, action: #selector(goBackToHomeButtonTapped), for: .touchUpInside)
+    }
 
     
-    private func configureButton() {
-        button = UIButton()
-        button.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(button)
+    private func layoutUI() {
+        goToCreateButton.translatesAutoresizingMaskIntoConstraints      = false
+        goBackToHomeButton.translatesAutoresizingMaskIntoConstraints    = false
+        view.addSubview(goToCreateButton)
+        view.addSubview(goBackToHomeButton)
         
-        button.setTitle("Create Account", for: .normal)
-        button.setTitleColor(.red, for: .normal)
-        
-        button.addTarget(self, action: #selector(buttonTapped
-            ), for: .touchUpInside)
         
         NSLayoutConstraint.activate([
-            button.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            button.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-            button.widthAnchor.constraint(equalToConstant: 150),
-            button.heightAnchor.constraint(equalToConstant: 50),
+            goToCreateButton.centerXAnchor.constraint   (equalTo: view.centerXAnchor),
+            goToCreateButton.centerYAnchor.constraint   (equalTo: view.centerYAnchor),
+            goToCreateButton.widthAnchor.constraint     (equalToConstant: 150),
+            goToCreateButton.heightAnchor.constraint    (equalToConstant: 50),
+            
+            goBackToHomeButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            goBackToHomeButton.topAnchor.constraint(equalTo: goToCreateButton.bottomAnchor, constant: 40),
+            goBackToHomeButton.widthAnchor.constraint(equalToConstant: 150),
+            goBackToHomeButton.heightAnchor.constraint(equalToConstant: 50),
         ])
     }
 }

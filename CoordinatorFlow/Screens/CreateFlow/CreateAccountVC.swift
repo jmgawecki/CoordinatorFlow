@@ -19,9 +19,7 @@ class CreateAccountVC: UIViewController {
     
     
     private func configureVC() {
-        view.backgroundColor    = .systemBackground
-        title                   = "tralala"
-        navigationController?.navigationBar.prefersLargeTitles          = true
+        self.configureVC(title: "Create an Account", backgroundColor: .systemBackground, isTitleLarge: true)
     }
     
 

@@ -37,6 +37,11 @@ class GoNextCoordinator: NSObject, Coordinator, UINavigationControllerDelegate {
     }
     
     
+    func goBackToHome() {
+        navigationController.popToRootViewController(animated: true)
+    }
+    
+    
     func childDidFinish(_ child: Coordinator?) {
         for (index, coordinator) in childCoordinators.enumerated() {
             if coordinator === child {
