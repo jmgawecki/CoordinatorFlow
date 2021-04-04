@@ -9,6 +9,7 @@ import UIKit
 
 class CreateAccountCoordinator: Coordinator {
     weak var parentCoordinator: MainCoordinator?
+    weak var goNextCoordinator: GoNextCoordinator?
     
     var childCoordinators = [Coordinator]()
     var navigationController: UINavigationController
@@ -24,9 +25,6 @@ class CreateAccountCoordinator: Coordinator {
     }
     
     
-    func didFinishCreatingAccount() {
-        parentCoordinator?.childDidFinish(self)
-    }
     
     
     

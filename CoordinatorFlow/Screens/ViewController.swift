@@ -26,7 +26,7 @@ class ViewController: UIViewController {
     
     private func configureVC() {
         view.backgroundColor    = .systemBackground
-        title                   = "tralala"
+        title                   = "ViewController"
         navigationController?.navigationBar.prefersLargeTitles          = true
     }
     
